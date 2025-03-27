@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Instalar o Poetry
-        run: |
+        run: poetry install --no-root
             curl -sSL https://install.python-poetry.org | python3 -
             echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Configurar cache do Poetry
